@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import RecipeComponent from './components/RecipeComponent';
+import RecipeServices from './services/RecipeServices';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+    const [allData, setAllData] = useState([]);
+  
+    useEffect(() => {
+      RecipeServices.getRecipeData()
+        .then(Recipe => setAllData(Recipe));
+    }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <p>App.js</p>
+    <RecipeComponent recipeData = {allData}/>
     </div>
   );
 }
