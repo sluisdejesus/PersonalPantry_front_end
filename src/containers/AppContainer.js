@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import PersonalPantryServices from "../services/PersonalPantryServices";
 import RecipeContainer from "./RecipesContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
-import CreateRecipeContainer from "./CreateRecipesContainer"
+import CreateRecipeContainer from "./CreateRecipeContainer"
 
 const AppContainer = () => {
 
