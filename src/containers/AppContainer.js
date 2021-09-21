@@ -10,9 +10,16 @@ const AppContainer = () => {
     const [ingredients, setIngredients] = useState([])
 
     useEffect(() => {
-        setAllRecipes(PersonalPantryServices.getRecipes())
-        setIngredients(PersonalPantryServices.getIngredients())
-        setShoppingList(PersonalPantryServices.getShoppingLists())
+        PersonalPantryServices.getRecipes()
+            .then(allRecipes => setAllRecipes(allRecipes));
+
+        
+        PersonalPantryServices.getIngredients()
+            .then(ingredients => setIngredients(ingredients));
+
+        
+        PersonalPantryServices.getShoppingLists()
+            .then(shoppingList => setShoppingList(shoppingList));
     }, [])
 
     return(
