@@ -1,15 +1,25 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import AllRecipes from "../components/AllRecipes";
 import ShoppingList from "../components/ShoppingList";
-
+import PersonalPantryServices from "../services/PersonalPantryServices";
 
 const AppContainer = () => {
+
+    const [allRecipes, setAllRecipes] = useState([])
+    const [shoppingList, setShoppingList] = useState({})
+    const [ingredients, setIngredients] = useState([])
+
+    useEffect(() => {
+        setAllRecipes(PersonalPantryServices.getRecipes())
+        setIngredients(PersonalPantryServices.getIngredients())
+        setShoppingList(PersonalPantryServices.getShoppingLists())
+    }, [])
 
     return(
         <>
         <h1>This is the App Container</h1>
-        <ShoppingList/>
         <AllRecipes/>
+        <ShoppingList/>
         </>
     );
 }

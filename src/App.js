@@ -1,7 +1,5 @@
 import './App.css';
-import RecipeComponent from './components/RecipeComponent';
-import RecipeServices from './services/RecipeServices';
-import { useEffect, useState } from 'react';
+import AppContainer from "./containers/AppContainer"
 
 function App() {
 
