@@ -15,7 +15,7 @@ const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
             <section key={recipe.id} onClick={handleClick} value={index}>
             
                 <ul>
-                    <li><img src={recipe.imageUrl}/></li>
+                    <li><img src={recipe.imageUrl} alt={recipe.name}/></li>
                     <li>{recipe.name}</li>
                     <li>Ready in {recipe.readyInMinutes} minutes</li>
                     <li>Calories {recipe.caloriesPerServing} kcal</li>
