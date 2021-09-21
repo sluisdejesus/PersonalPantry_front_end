@@ -1,6 +1,7 @@
 import React from "react";
 
-const Recipe = () => {
+const Recipe = ({recipe}) => {
+
     return (
         <h4>This is a recipe</h4>
         // <div>

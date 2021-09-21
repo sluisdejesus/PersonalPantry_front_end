@@ -25,8 +25,8 @@ const AppContainer = () => {
     return(
         <>
         <h1>This is the App Container</h1>
-        <AllRecipes/>
-        <ShoppingList/>
+        <AllRecipes allRecipes={allRecipes}/>
+        <ShoppingList shoppingList={shoppingList}/>
         </>
     );
 }
