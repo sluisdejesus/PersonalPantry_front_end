@@ -5,21 +5,17 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-    const [allData, setAllData] = useState([]);
-    const [selectedRecipe, setSelectedRecipe] = useState(null);
-  
-    useEffect(() => {      
-      RecipeServices.getRecipeData()
-        .then(Recipe => setAllData(Recipe));
-
-    }, []);
-
   return (
-    <div className="App">
-    <p></p>
-    <RecipeComponent recipeData = {allData}/>
-    </div>
+  <AppContainer/>
   );
 }
 
 export default App;
+
+// - AppContainer
+  // - RecipeCollection
+    // - Recipe
+  
+  // - ShoppingList
+
+  // - CreateRecipe
