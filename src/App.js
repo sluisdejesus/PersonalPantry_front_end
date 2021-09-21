@@ -2,6 +2,7 @@ import './App.css';
 import RecipeComponent from './components/RecipeComponent';
 import RecipeServices from './services/RecipeServices';
 import { useEffect, useState } from 'react';
+import RecipeForm from './components/RecipeForm';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
     <p></p>
     <RecipeComponent recipeData = {allData}/>
+    <RecipeForm/>
     </div>
   );
 }
