@@ -2,7 +2,7 @@ import React from "react";
 
 const Recipe = ({chosenRecipe}) => {
 
-    if(chosenRecipe != null) {
+    if(chosenRecipe) {
 
     return (
         <ul>

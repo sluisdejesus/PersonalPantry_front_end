@@ -9,7 +9,7 @@ const AppContainer = () => {
     const [allRecipes, setAllRecipes] = useState([])
     const [shoppingList, setShoppingList] = useState({})
     const [ingredients, setIngredients] = useState([])
-    const [chosenRecipe, setChosenRecipe] = useState({})
+    const [chosenRecipe, setChosenRecipe] = useState(null)
 
     useEffect(() => {
         PersonalPantryServices.getRecipes()

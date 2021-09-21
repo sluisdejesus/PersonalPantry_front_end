@@ -23,13 +23,13 @@ const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
             );
         });
 
-        if(chosenRecipe === null) {
+        if(!chosenRecipe) {
 
         return (
             <>
             {recipeNodes}
             </>
-        )
+            )
 
         } else {
             return null
