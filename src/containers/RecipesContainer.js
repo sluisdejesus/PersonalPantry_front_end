@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AllRecipes from  "../components/AllRecipes"
 import Recipe from  "../components/Recipe"
 
-const RecipeContainer = ({allRecipes}) => {
+const RecipesContainer = ({allRecipes}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
     
@@ -24,4 +24,4 @@ const RecipeContainer = ({allRecipes}) => {
 
 }
 
-export default RecipeContainer;
+export default RecipesContainer;
