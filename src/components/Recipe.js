@@ -2,15 +2,19 @@ import React from "react";
 
 const Recipe = ({chosenRecipe}) => {
 
+    if(chosenRecipe != null) {
+
     return (
-        <div>
         <ul>
             <li>{chosenRecipe.name}</li>
             <li>Instructions - {chosenRecipe.instructions}</li>
             <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
         </ul>
-        </div>
     )
+    
+    } else {
+        return null
+    }
 
 }
 

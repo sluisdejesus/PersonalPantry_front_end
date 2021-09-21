@@ -9,9 +9,6 @@ const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
        const chosenRecipe = allRecipes[event.target.value]
        onRecipeChosen(chosenRecipe)
         
-        // return(
-        //     <Recipe recipe = {chosenRecipe}/>
-        // )
     }
 
     const recipeNodes = allRecipes.map((recipe, index) => {
@@ -26,12 +23,17 @@ const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
             );
         });
 
+        if(chosenRecipe === null) {
+
         return (
             <>
             {recipeNodes}
-            <Recipe chosenRecipe={chosenRecipe}/>
             </>
-        );
-    };
+        )
+
+        } else {
+            return null
+        } 
+    }
 
 export default AllRecipes

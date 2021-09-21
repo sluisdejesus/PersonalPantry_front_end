@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import AllRecipes from "../components/AllRecipes";
 import ShoppingList from "../components/ShoppingList";
 import PersonalPantryServices from "../services/PersonalPantryServices";
+import Recipe from "../components/Recipe";
 
 const AppContainer = () => {
 
@@ -27,10 +28,15 @@ const AppContainer = () => {
         setChosenRecipe(recipe)
     }
 
+    // useEffect(() => {
+
+    // }, [chosenRecipe])
+
     return(
         <>
         <h1>This is the App Container</h1>
         <AllRecipes allRecipes={allRecipes} onRecipeChosen={onRecipeChosen} chosenRecipe={chosenRecipe}/>
+        <Recipe chosenRecipe={chosenRecipe}/>
         <ShoppingList shoppingList={shoppingList}/>
         </>
     );
