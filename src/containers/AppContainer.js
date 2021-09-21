@@ -25,9 +25,9 @@ const AppContainer = () => {
 
     return(
         <>
-        <h1>This is the App Container</h1>
+        {/* <h1>This is the App Container</h1>
         <AllRecipes/>
-        <ShoppingList/>
+        <ShoppingList/> */}
         <RecipeForm/>
         </>
     );
