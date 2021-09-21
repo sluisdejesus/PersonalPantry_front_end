@@ -23,3 +23,12 @@ function App() {
 }
 
 export default App;
+
+// - AppContainer
+    // - All Recipes
+          // - Recipe
+              // - OpenRecipe
+
+    // - ShoppingList
+
+    // - CreateRecipe
