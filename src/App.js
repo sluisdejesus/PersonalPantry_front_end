@@ -4,7 +4,10 @@ import AppContainer from "./containers/AppContainer"
 function App() {
 
   return (
-  <AppContainer/>
+      <>
+      <h1>Personal Pantry</h1>
+      <AppContainer/>
+      </>
   );
 }
 
