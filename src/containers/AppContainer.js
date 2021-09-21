@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from "react";
-// import AllRecipes from "../components/AllRecipes";
-// import ShoppingList from "../components/ShoppingList";
 import PersonalPantryServices from "../services/PersonalPantryServices";
-// import Recipe from "../components/Recipe";
 import RecipeContainer from "./RecipeContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
 
@@ -11,9 +8,8 @@ const AppContainer = () => {
     const [allRecipes, setAllRecipes] = useState([])
     const [shoppingList, setShoppingList] = useState({})
     const [ingredients, setIngredients] = useState([])
-
-    const [shoppingListClick, setShoppingListClick] = useState(false)
     const [recipesListClick, setRecipesListClick] = useState(false)
+    const [shoppingListClick, setShoppingListClick] = useState(false)
     
     useEffect(() => {
         PersonalPantryServices.getRecipes()
