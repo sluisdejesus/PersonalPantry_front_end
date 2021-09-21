@@ -1,10 +1,21 @@
-const baseURL = 'http://localhost:8080/recipes';
+const baseURL = 'http://localhost:8080/';
 
-const RecipeServices = {
-    getRecipeData() {
-        return fetch(baseURL)
+const PersonalPantryServices = {
+    
+    getRecipes() {
+        return fetch(baseURL + 'recipes')
         .then(res => res.json());
     },
+
+    getIngredients() {
+        return fetch(baseURL + 'ingredients')
+        .then(res => res.json());
+    },
+
+    getShoppingLists() {
+        return fetch(baseURL + 'shoppingLists/1')
+        .then(res => res.json());
+    }
 
     // addCarbonData(data) {
     //     return fetch(baseURL, {
@@ -39,4 +50,4 @@ const RecipeServices = {
     
 }
 
-export default RecipeServices;
+export default PersonalPantryServices;
