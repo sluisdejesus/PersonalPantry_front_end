@@ -1,10 +1,15 @@
 import React from 'react'
 import RecipeForm from '../components/RecipeForm'
 
-const CreateRecipeContainer = () => {
+const CreateRecipeContainer = ({returnHome}) => {
+
+    const handleClick = () => {
+        returnHome()
+    }
 
     return (
         <>
+        <button onClick={handleClick}>Home</button>
         <RecipeForm/>
         </>
     )

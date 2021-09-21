@@ -29,6 +29,7 @@ const AppContainer = () => {
     const returnHome = () => {
         setShoppingListClick(false);
         setRecipesListClick(false);
+        setCreateRecipeClick(false);
     }
 
 
