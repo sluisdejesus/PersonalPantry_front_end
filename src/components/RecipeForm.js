@@ -26,8 +26,8 @@ const RecipeForm = () => {
     };
 
 
-const instructionSteps = instructions.map((instruction) => {
-    return <li><input type= "text" ></input></li>
+const instructionSteps = instructions.map((instruction, index) => {
+    return <li key={index}><input type= "text" ></input></li>
 })
 
 return (
@@ -46,7 +46,7 @@ return (
         <div>
             <label htmlFor="caloriesPerServing">Calories per Serving:  </label>
             <input type="number" id="caloriesPerServing" min="0" onChange={handleCaloriesPerServing}></input>
-            <label>kCal</label>
+            <label>kcal</label>
         </div>
         <div>
             <label htmlFor="description">Description:  </label>
