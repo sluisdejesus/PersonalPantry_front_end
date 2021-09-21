@@ -1,5 +1,4 @@
 import React from "react";
-// import { render } from "@testing-library/react";
 import Recipe from "./Recipe";
 
 const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
@@ -23,17 +22,11 @@ const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
             );
         });
 
-        if(!chosenRecipe) {
-
-        return (
-            <>
-            {recipeNodes}
-            </>
-            )
-
-        } else {
-            return null
-        } 
+    return (
+        <>
+        {recipeNodes}
+        </>
+        )
     }
 
 export default AllRecipes

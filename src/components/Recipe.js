@@ -2,8 +2,6 @@ import React from "react";
 
 const Recipe = ({chosenRecipe}) => {
 
-    if(chosenRecipe) {
-
     return (
         <ul>
             <li>{chosenRecipe.name}</li>
@@ -12,10 +10,6 @@ const Recipe = ({chosenRecipe}) => {
         </ul>
     )
     
-    } else {
-        return null
-    }
-
 }
 
 export default Recipe;
