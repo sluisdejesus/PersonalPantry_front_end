@@ -1,7 +1,17 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import ShoppingList from "../components/ShoppingList"
 
-const ShoppingListContainer = ({shoppingList, returnHome}) => {
+const ShoppingListContainer = ({shoppingList, returnHome, shoppingListClick}) => {
+
+    // const [shoppingListMap, setShoppingListMap] = useState([])
+
+    // useEffect(() => {
+    //     getShoppingListMap()
+    // }, [shoppingListClick])
+
+    // const getShoppingListMap = () => {
+    //    setShoppingListMap(Object.entries(shoppingList.ingredientList))
+    // }
 
     const handleClick = (event) => {
         returnHome();
@@ -10,8 +20,8 @@ const ShoppingListContainer = ({shoppingList, returnHome}) => {
     return(
         <>
         <button onClick={handleClick}>Home</button>
-        <h3>I am the shoppingList</h3>
-        <ShoppingList shoppingList={ShoppingList}/>
+        <h3>I am the shoppingList Container</h3>
+        <ShoppingList shoppingList={shoppingList}/>
         </>
     )
 };

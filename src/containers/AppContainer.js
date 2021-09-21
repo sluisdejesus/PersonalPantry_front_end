@@ -56,7 +56,7 @@ const AppContainer = () => {
 
     if(shoppingListClick) {
         return(
-            <ShoppingListContainer shoppingList={shoppingList} returnHome={returnHome}/>
+            <ShoppingListContainer shoppingList={shoppingList} returnHome={returnHome} shoppingListClick={shoppingListClick}/>
         )
     }
 
