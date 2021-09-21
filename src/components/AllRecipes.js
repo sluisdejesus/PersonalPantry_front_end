@@ -1,17 +1,17 @@
-import React , {render} from "react";
+import React from "react";
 // import { render } from "@testing-library/react";
 import Recipe from "./Recipe";
 
-const AllRecipes = ({allRecipes, onChosenRecipe}) => {
+const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
 
     const handleClick = (event) => {
         
-        const chosenRecipe = allRecipes[event.target.value]
-        onChosenRecipe(chosenRecipe)
+       const chosenRecipe = allRecipes[event.target.value]
+       onRecipeChosen(chosenRecipe)
         
-        render(
-            <Recipe recipe = {chosenRecipe}/>
-        )
+        // return(
+        //     <Recipe recipe = {chosenRecipe}/>
+        // )
     }
 
     const recipeNodes = allRecipes.map((recipe, index) => {
@@ -20,7 +20,7 @@ const AllRecipes = ({allRecipes, onChosenRecipe}) => {
                 <ul>
                     <li>{recipe.name}</li>
                     <li>Ready in {recipe.readyInMinutes} minutes</li>
-                    <li>{recipe.caloriesPerServing} calories per serving</li>
+                    <li>Calories {recipe.caloriesPerServing} kcal</li>
                 </ul>        
             </section>
             );
@@ -29,6 +29,7 @@ const AllRecipes = ({allRecipes, onChosenRecipe}) => {
         return (
             <>
             {recipeNodes}
+            <Recipe chosenRecipe={chosenRecipe}/>
             </>
         );
     };

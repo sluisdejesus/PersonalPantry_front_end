@@ -23,14 +23,14 @@ const AppContainer = () => {
             .then(shoppingList => setShoppingList(shoppingList));
     }, [])
 
-    const onChosenRecipe = (recipe) => {
+    const onRecipeChosen = (recipe) => {
         setChosenRecipe(recipe)
     }
 
     return(
         <>
         <h1>This is the App Container</h1>
-        <AllRecipes allRecipes={allRecipes} onChosenRecipe={onChosenRecipe}/>
+        <AllRecipes allRecipes={allRecipes} onRecipeChosen={onRecipeChosen} chosenRecipe={chosenRecipe}/>
         <ShoppingList shoppingList={shoppingList}/>
         </>
     );
