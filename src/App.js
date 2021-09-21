@@ -6,15 +6,17 @@ import { useEffect, useState } from 'react';
 function App() {
 
     const [allData, setAllData] = useState([]);
+    const [selectedRecipe, setSelectedRecipe] = useState(null);
   
-    useEffect(() => {
+    useEffect(() => {      
       RecipeServices.getRecipeData()
         .then(Recipe => setAllData(Recipe));
+
     }, []);
 
   return (
     <div className="App">
-    <p>App.js</p>
+    <p></p>
     <RecipeComponent recipeData = {allData}/>
     </div>
   );
