@@ -11,6 +11,8 @@ const Recipe = ({chosenRecipe}) => {
         return <li>{instruction}</li>   
 })
     return (
+        <section>
+        <img src={chosenRecipe.imageUrl}/>
         <ul>
             <li>{chosenRecipe.name}</li>
             
@@ -22,6 +24,7 @@ const Recipe = ({chosenRecipe}) => {
             </li>
             <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
         </ul>
+        </section>
     )
     } else{
         return null}
