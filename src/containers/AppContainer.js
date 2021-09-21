@@ -8,6 +8,7 @@ const AppContainer = () => {
     const [allRecipes, setAllRecipes] = useState([])
     const [shoppingList, setShoppingList] = useState({})
     const [ingredients, setIngredients] = useState([])
+    const [chosenRecipe, setChosenRecipe] = useState({})
 
     useEffect(() => {
         PersonalPantryServices.getRecipes()
@@ -22,10 +23,14 @@ const AppContainer = () => {
             .then(shoppingList => setShoppingList(shoppingList));
     }, [])
 
+    const onChosenRecipe = (recipe) => {
+        setChosenRecipe(recipe)
+    }
+
     return(
         <>
         <h1>This is the App Container</h1>
-        <AllRecipes allRecipes={allRecipes}/>
+        <AllRecipes allRecipes={allRecipes} onChosenRecipe={onChosenRecipe}/>
         <ShoppingList shoppingList={shoppingList}/>
         </>
     );

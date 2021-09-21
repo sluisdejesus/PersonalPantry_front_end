@@ -1,28 +1,30 @@
-import React from "react";
+import React , {render} from "react";
+// import { render } from "@testing-library/react";
 import Recipe from "./Recipe";
 
-const AllRecipes = ({allRecipes}) => {
+const AllRecipes = ({allRecipes, onChosenRecipe}) => {
 
     const handleClick = (event) => {
         
-        const clickedRecipe = allRecipes["id"][event.target.value]
+        const chosenRecipe = allRecipes[event.target.value]
+        onChosenRecipe(chosenRecipe)
         
-        return(
-            <Recipe recipe = {clickedRecipe}/>
-        );
+        render(
+            <Recipe recipe = {chosenRecipe}/>
+        )
     }
 
-    const recipeNodes = allRecipes.map(recipe =>{
-    return(
-        <section key={recipe.id} onClick={handleClick} value={recipe.id}>
-            <ul>
-                <li>{recipe.name}</li>
-                <li>Ready in {recipe.readyInMinutes} minutes</li>
-                <li>{recipe.caloriesPerServing} calories per serving</li>
-            </ul>        
-        </section>
-        );
-});
+    const recipeNodes = allRecipes.map((recipe, index) => {
+        return(
+            <section key={recipe.id} onClick={handleClick} value={index}>
+                <ul>
+                    <li>{recipe.name}</li>
+                    <li>Ready in {recipe.readyInMinutes} minutes</li>
+                    <li>{recipe.caloriesPerServing} calories per serving</li>
+                </ul>        
+            </section>
+            );
+        });
 
         return (
             <>
