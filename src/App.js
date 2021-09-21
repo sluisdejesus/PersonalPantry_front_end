@@ -12,7 +12,7 @@ export default App;
 
 // - AppContainer
   // - RecipeCollection
-    // - Recipe
+  // - Recipe
   
   // - ShoppingList
 

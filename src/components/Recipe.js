@@ -1,16 +1,20 @@
 import React from "react";
 
-const Recipe = () => {
+const Recipe = ({chosenRecipe}) => {
+
+    if(chosenRecipe) {
+
     return (
-        <h4>This is a recipe</h4>
-        // <div>
-        // <ul>
-        //     <li>{recipe.name}</li>
-        //     <li>{recipe.instructions}</li>
-        //     <li>{recipe.readyInMinutes}</li>
-        // </ul>
-        // </div>
+        <ul>
+            <li>{chosenRecipe.name}</li>
+            <li>Instructions - {chosenRecipe.instructions}</li>
+            <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
+        </ul>
     )
+    
+    } else {
+        return null
+    }
 
 }
 

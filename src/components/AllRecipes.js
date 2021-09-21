@@ -1,14 +1,39 @@
 import React from "react";
+// import { render } from "@testing-library/react";
 import Recipe from "./Recipe";
 
-const AllRecipes = () => {
+const AllRecipes = ({allRecipes, onRecipeChosen, chosenRecipe}) => {
 
-    return (
-        <>
-        <h3>These are the recipes</h3>
-        <Recipe/>
-        </>
-    )
-}
+    const handleClick = (event) => {
+        
+       const chosenRecipe = allRecipes[event.target.value]
+       onRecipeChosen(chosenRecipe)
+        
+    }
+
+    const recipeNodes = allRecipes.map((recipe, index) => {
+        return(
+            <section key={recipe.id} onClick={handleClick} value={index}>
+                <ul>
+                    <li>{recipe.name}</li>
+                    <li>Ready in {recipe.readyInMinutes} minutes</li>
+                    <li>Calories {recipe.caloriesPerServing} kcal</li>
+                </ul>        
+            </section>
+            );
+        });
+
+        if(!chosenRecipe) {
+
+        return (
+            <>
+            {recipeNodes}
+            </>
+            )
+
+        } else {
+            return null
+        } 
+    }
 
 export default AllRecipes
