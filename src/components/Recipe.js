@@ -2,13 +2,10 @@ import React from "react";
 
 const Recipe = ({chosenRecipe}) => {
 
-  
-    
-    
     if(chosenRecipe) {
 
    const instructionsList = chosenRecipe.instructions.map((instruction) => {
-        return <li>{instruction}</li>   
+        return <li key={chosenRecipe.id}>{instruction}</li>   
 })
     return (
         <section>
@@ -30,5 +27,4 @@ const Recipe = ({chosenRecipe}) => {
         return null}
 
 }
-
 export default Recipe;

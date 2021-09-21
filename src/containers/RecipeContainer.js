@@ -6,18 +6,21 @@ const RecipeContainer = ({allRecipes}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
     
-    
     const onRecipeChosen = (recipe) => {
         setChosenRecipe(recipe);
     };
      
+    if(chosenRecipe) {
+        return (
+            <Recipe chosenRecipe={chosenRecipe}/>
+        )
+    }
 
-    return(
-        <>
-        <AllRecipes allRecipes={allRecipes} onRecipeChosen={onRecipeChosen} chosenRecipe={chosenRecipe}/>
-        <Recipe chosenRecipe={chosenRecipe}/>
-        </>
-    )
+    if(!chosenRecipe) {
+        return (
+            <AllRecipes allRecipes={allRecipes} onRecipeChosen={onRecipeChosen} chosenRecipe={chosenRecipe}/>
+        )
+    }
 
 }
 

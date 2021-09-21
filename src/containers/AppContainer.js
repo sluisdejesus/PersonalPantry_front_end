@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import PersonalPantryServices from "../services/PersonalPantryServices";
 import RecipeContainer from "./RecipeContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
+import CreateRecipeContainer from "./CreateRecipeContainer"
 
 const AppContainer = () => {
 
@@ -10,6 +11,7 @@ const AppContainer = () => {
     const [ingredients, setIngredients] = useState([])
     const [recipesListClick, setRecipesListClick] = useState(false)
     const [shoppingListClick, setShoppingListClick] = useState(false)
+    const [createRecipeClick, setCreateRecipeClick] = useState(false)
     
     useEffect(() => {
         PersonalPantryServices.getRecipes()
@@ -39,6 +41,10 @@ const AppContainer = () => {
         setShoppingListClick(true)
     }
 
+    const handleCreateRecipeClick = event => {
+        setCreateRecipeClick(true)
+    }
+
 
     if(recipesListClick) {
         return(
@@ -53,53 +59,20 @@ const AppContainer = () => {
         )
     }
 
+    if(createRecipeClick) {
+        return(
+            <CreateRecipeContainer returnHome={returnHome}/>
+        )
+    }
+
 
     return(
         <>
         <button onClick={handleAllRecipesClick}>View All Recipes</button>
         <button onClick={handleShoppingListClick}>View Shopping List</button>
+        <button onClick={handleCreateRecipeClick}>Create a Recipe</button>
         </>
     );
 }
 
 export default AppContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     const [allData, setAllData] = useState([]);
-//     const [selectedRecipe, setSelectedRecipe] = useState(null);
-  
-//     useEffect(() => {      
-//       RecipeServices.getRecipeData()
-//         .then(Recipe => setAllData(Recipe));
-
-//     }, []);
-
-//   return (
-//     <div className="App">
-//     <p></p>
-//     <RecipeComponent recipeData = {allData}/>
-//     </div>
-//   );
-// }
