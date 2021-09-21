@@ -28,6 +28,11 @@ const AppContainer = () => {
             .then(shoppingList => setShoppingList(shoppingList));
     }, [])
 
+    const returnHome = () => {
+        setShoppingListClick(false);
+        setRecipesListClick(false);
+    }
+
 
     const handleAllRecipesClick = event => {
         setRecipesListClick(true)
@@ -39,16 +44,16 @@ const AppContainer = () => {
     }
 
 
-    if(recipesListClick === true) {
+    if(recipesListClick) {
         return(
-            <RecipeContainer allRecipes={allRecipes}/>
+            <RecipeContainer allRecipes={allRecipes} returnHome={returnHome}/>
         )
     }
 
 
-    if(shoppingListClick === true) {
+    if(shoppingListClick) {
         return(
-            <ShoppingListContainer shoppingList={shoppingList}/>
+            <ShoppingListContainer shoppingList={shoppingList} returnHome={returnHome}/>
         )
     }
 
