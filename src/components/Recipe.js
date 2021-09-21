@@ -5,21 +5,23 @@ const Recipe = ({chosenRecipe}) => {
     if(chosenRecipe) {
 
    const instructionsList = chosenRecipe.instructions.map((instruction) => {
-        return <li>{instruction}</li>   
+        return <li key={chosenRecipe.id}>{instruction}</li>   
 })
     return (
-        <ul>
-            <li>{chosenRecipe.name}</li>
-            
-            <li>
-            Instructions
-                <ul>
-                    {instructionsList}
-                </ul>
-            </li>
-            <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
-        </ul>
-    )
+        <section >
+            <ul>
+                <li>{chosenRecipe.name}</li>
+                
+                <li>
+                Instructions
+                    <ul>
+                        {instructionsList}
+                    </ul>
+                </li>
+                <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
+            </ul>
+        </section>
+        )
     }
 }
 export default Recipe;
