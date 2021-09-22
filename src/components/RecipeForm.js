@@ -64,7 +64,7 @@ return (
        </div>
     <br></br>
 
-    <button onSubmit={handleSubmit}>Save Recipe</button>
+    <button> Recipe</button>
 
 
     </form>
