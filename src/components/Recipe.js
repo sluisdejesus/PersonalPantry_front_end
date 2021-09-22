@@ -1,4 +1,5 @@
 import React from "react";
+import "./Recipe.css";
 
 const Recipe = ({chosenRecipe}) => {
 
@@ -15,11 +16,11 @@ const Recipe = ({chosenRecipe}) => {
     })
     
     return (
-        <section>
+        <section className="individual_recipe">
         <label htmlFor="name">Serving size:</label>
         <input type="number" id="serving_size" min="1"></input>
         <button>Add to Shopping list</button>
-        <img src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
+        <img className="recipe_image"src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
         <ul>
             <li>{chosenRecipe.name}</li>
             

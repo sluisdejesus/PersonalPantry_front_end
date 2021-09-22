@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AllRecipes from  "../components/AllRecipes"
 import Recipe from  "../components/Recipe"
+import "./RecipesContainer.css";
 
 const RecipesContainer = ({allRecipes, returnHome}) => {
 

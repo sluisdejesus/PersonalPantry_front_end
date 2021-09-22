@@ -1,4 +1,5 @@
 import React from "react";
+import "./ShoppingList.css";
 
 const ShoppingList = ({shoppingList}) => {
 
@@ -9,12 +10,14 @@ const ShoppingList = ({shoppingList}) => {
       })
 
     return (
-        <>
+        <section className="ingredient_list">
         <h3>This is this shopping list</h3>
+        <div> 
         <ul>
         {shoppingListIngredientsList}
         </ul>
-        </>
+        </div>       
+        </section>
     )
 }
 

@@ -3,6 +3,7 @@ import PersonalPantryServices from "../services/PersonalPantryServices";
 import RecipeContainer from "./RecipesContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
 import CreateRecipeContainer from "./CreateRecipeContainer"
+import "./AppContainer.css";
 
 const AppContainer = () => {
 
