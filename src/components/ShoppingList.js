@@ -11,7 +11,7 @@ const ShoppingList = ({shoppingList}) => {
 
     return (
         <section className="ingredient_list">
-        <h3>This is this shopping list</h3>
+        <h3>Shopping List</h3>
         <div> 
         <ul>
         {shoppingListIngredientsList}

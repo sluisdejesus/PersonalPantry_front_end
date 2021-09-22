@@ -7,7 +7,6 @@ import PersonalPantryServices from "../services/PersonalPantryServices";
 const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
-    // const [selectedRecipe, setSelectedRecipe] = useState({})
     const [desiredServings, setDesiredServings] = useState(0)
     
     const onRecipeChosen = (recipe) => {
@@ -33,10 +32,6 @@ const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList
             .then(shoppingList => setShoppingList(shoppingList));
         })
     };
-
-    // useEffect (() => {
-    //     PersonalPantryServices.addSelectedRecipe(selectedRecipe)
-    // }, [selectedRecipe]) 
 
     if(chosenRecipe) {
         return (

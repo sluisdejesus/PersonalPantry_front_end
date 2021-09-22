@@ -21,7 +21,6 @@ const ShoppingListContainer = ({shoppingList, returnHome, shoppingListClick}) =>
     return(
         <>
         <button onClick={handleClick}>Home</button>
-        <h3>I am the shoppingList Container</h3>
         <ShoppingList shoppingList={shoppingList}/>
         </>
     )

@@ -26,15 +26,9 @@ const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
     return (
         <section className="individual_recipe">
         <label htmlFor="name">Serving size:</label>
-<<<<<<< HEAD
-        <input type="number" id="serving_size" min="1"></input>
-        <button>Add to Shopping list</button>
-        <img className="recipe_image"src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
-=======
         <input onChange={onChange} type="number" id="serving_size" min="1" placeholder="1"></input>
         <button onClick={handleClick}>Add to Shopping list</button>
-        <img src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
->>>>>>> develop
+        <img className="recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
         <ul>
             <li>{chosenRecipe.name}</li>
             

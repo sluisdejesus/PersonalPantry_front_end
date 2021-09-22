@@ -1,8 +1,14 @@
 @media(max-width:480px){
 .recipe_section{
+    border-radius: 5%;
     background-color: #EF8276;
     width: 80%;
-    border-radius: 5%;
+    height: 20vh;    
+    color: white;
+    margin: 4%;
+    padding-top: 10vh;
+
+    
 
 }
 .recipe_section > ul > li {
@@ -10,6 +16,19 @@
 }
 
 .recipe_image{
-    width: 30%;
+    width: 120px;
+    height: 120px;
+    /* padding-right: 10%;
+    padding-top: 3vh;
+    padding-bottom: 3vh; */
+}
+
+.recipe_details{
+    padding-left: 10%;
+}
+
+.recipe_details_box{
+    display: flex;
+    flex-direction: row;
 }
 }

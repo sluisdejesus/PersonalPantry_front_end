@@ -1,17 +1,16 @@
 import './App.css';
 import AppContainer from "./containers/AppContainer"
-// import FinalLogoWhiteBackground from "./FinalLogoWhiteBackground.jpg";
+import FinalLogoWhiteBackground from "./FinalLogoWhiteBackground.jpg";
 
 function App() {
 
   return (
-      <>
+      <section className="app_container">
       <header className="header">
-      {/* <img src={'./FinalLogoWhiteBackground.jpg'} /> */}
-      <h1 className="header_text">Personal Pantry</h1>
+      <img src = {FinalLogoWhiteBackground}/>
       </header>      
       <AppContainer/>
-      </>
+      </section>
   );
 }
 

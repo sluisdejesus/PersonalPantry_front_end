@@ -14,11 +14,18 @@ const AllRecipes = ({allRecipes, onRecipeChosen}) => {
         return(
             <section className="recipe_section" key={recipe.id} value={index} onClick={() => handleClick(index)}>
                 
-                <ul>
+                <ul className="recipe_details_box">
+                    <div className="recipe_details_image">
                     <img className="recipe_image" src={recipe.imageUrl} alt={recipe.name}/>
+                    </div>
+
+                    <div className="recipe_details">
+
                     <h3>{recipe.name}</h3>
-                    <li>Ready in {recipe.readyInMinutes} minutes</li>
-                    <li>Calories {recipe.caloriesPerServing} kcal</li>
+                    <li className ="recipe_list">Ready in {recipe.readyInMinutes} minutes</li>
+                    <li className ="recipe_list">Calories {recipe.caloriesPerServing} kcal</li>
+
+                    </div>
                 </ul>        
             </section>
             );
