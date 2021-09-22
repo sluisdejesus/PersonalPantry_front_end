@@ -4,7 +4,7 @@ import Recipe from  "../components/Recipe"
 import "./RecipesContainer.css";
 import PersonalPantryServices from "../services/PersonalPantryServices";
 
-const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList}) => {
+const RecipesContainer = ({allRecipes, shoppingList, setShoppingList}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
     const [desiredServings, setDesiredServings] = useState(0)
@@ -12,10 +12,6 @@ const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList
     const onRecipeChosen = (recipe) => {
         setChosenRecipe(recipe);
     };
-
-    const handleClick = () => {
-        returnHome()
-    }
 
     const handleRecipeClick = () => {
         setChosenRecipe(null)
@@ -45,7 +41,6 @@ const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList
     if(!chosenRecipe) {
         return (
             <>
-            <button onClick={handleClick}>Home</button>
             <AllRecipes allRecipes={allRecipes} onRecipeChosen={onRecipeChosen} chosenRecipe={chosenRecipe}/>
             </>
         )
