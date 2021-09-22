@@ -5,6 +5,7 @@
     width: 80%;
     border-radius: 20px;
     color: white;
+    box-shadow: 1px 1px 2px black;
 }
 
 .individual_recipe > ul > li {
@@ -27,17 +28,27 @@
 }
 
 #serving_size{
-    width: 10vw;
-    margin-left: 5px;
+    width: 7vw;
+    margin-left: 2px;
     margin-right: 10px;
-    
+    text-align: center;
+
 }
 
 #add_recipe_button{
     border-radius: 8px;
-
+    box-shadow: 1px 1px 1px black;
     color:black;
     background-color: white;
 
+}
+#individual_recipe_name{
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+#individual_recipe_image{
+    margin-right: 5%;
+    margin-left:5%
 }
 }

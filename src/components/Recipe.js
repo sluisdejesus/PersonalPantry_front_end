@@ -32,7 +32,7 @@ const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
                 <button id="add_recipe_button" onClick={handleClick}>Add to Shopping list</button>
             </div>
 
-            <h3>{chosenRecipe.name}</h3>
+            <h3 id = "individual_recipe_name">{chosenRecipe.name}</h3>
 
             <div id = "individual_recipe_image">
                 <img className="recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
