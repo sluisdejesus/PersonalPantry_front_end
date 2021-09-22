@@ -69,11 +69,11 @@ const AppContainer = () => {
 
 
     return(
-        <>
-        <button onClick={handleAllRecipesClick}>View All Recipes</button>
-        <button onClick={handleShoppingListClick}>View Shopping List</button>
-        <button onClick={handleCreateRecipeClick}>Create a Recipe</button>
-        </>
+        <section className="main_page">
+        <div className ="homepage_button" onClick={handleAllRecipesClick}>View All Recipes</div>
+        <div className ="homepage_button" onClick={handleShoppingListClick}>View Shopping List</div>
+        <div className ="homepage_button" onClick={handleCreateRecipeClick}>Create a Recipe</div>
+        </section>
     );
 }
 

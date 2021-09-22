@@ -1,4 +1,5 @@
 import React, { useState } from "react"; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./RecipeForm.css";
 
 const RecipeForm = () => {   
@@ -32,7 +33,7 @@ const instructionSteps = instructions.map((instruction, index) => {
 })
 
 return (
-    <form>
+    <form className="recipe_form">
         <h2>New Recipe</h2>
         <div>
             <label htmlFor= "name">Recipe Name:  </label>
@@ -61,7 +62,8 @@ return (
             {instructionSteps}
             </ul>
             <button onClick={handleClick}>Add more steps</button>
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-plus">Add More Steps</i>
+            <FontAwesomeIcon icon="coffee" />
        </div>
     <br></br>
 
