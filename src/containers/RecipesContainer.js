@@ -32,7 +32,7 @@ const RecipesContainer = ({allRecipes, shoppingList, setShoppingList}) => {
     if(chosenRecipe) {
         return (
             <>
-            <button onClick={handleRecipeClick}>Back</button>
+            <button id="back_button" onClick={handleRecipeClick}>Back</button>
             <Recipe chosenRecipe={chosenRecipe} recipeSelected={recipeSelected} setDesiredServings={setDesiredServings}/>
             </>
         )

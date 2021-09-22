@@ -10,18 +10,19 @@
 .homepage_button{
     background-color: #EF8276;
     font-size: 3vh;
-    height: 20vh;
+    height: 17vh;
     width: 40vh;
-    margin: 7%;
+    margin: 8%;
     justify-content: space-evenly;
-    padding: 5;
-    border-radius: 5%;
+    border-radius: 10%;
     text-align: center;
-    padding-top: 14%;
+    padding-top: 13%;
     color: white;
     font-weight: bold;
-
-    
+    font-size: 25px;
+}
+.app_logo{
+    margin-top: 20px;
 }
 }
 

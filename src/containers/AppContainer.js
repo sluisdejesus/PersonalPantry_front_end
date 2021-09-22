@@ -3,7 +3,7 @@ import PersonalPantryServices from "../services/PersonalPantryServices";
 import RecipeContainer from "./RecipesContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
 import CreateRecipeContainer from "./CreateRecipeContainer"
-import FinalLogoWhiteBackground from "../FinalLogoWhiteBackground.jpg";
+import FinalLogoWhiteBackground from "../image.png";
 
 import "./AppContainer.css";
 
@@ -53,8 +53,11 @@ const AppContainer = () => {
     if(recipesListClick) {
         return(
             <>
-                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+           
+                <img className = "app_logo" src={FinalLogoWhiteBackground} onClick={handleClick} />
+        
                 <RecipeContainer allRecipes={allRecipes} shoppingList={shoppingList} setShoppingList={setShoppingList}/>
+            
             </>
         )
     }
@@ -62,7 +65,7 @@ const AppContainer = () => {
     if(shoppingListClick) {
         return(
             <>
-                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+                <img className = "app_logo" src={FinalLogoWhiteBackground} onClick={handleClick} />
                 <ShoppingListContainer shoppingList={shoppingList} shoppingListClick={shoppingListClick}/>
             </>
         )
@@ -71,7 +74,7 @@ const AppContainer = () => {
     if(createRecipeClick) {
         return(
             <>
-                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+                <img className = "app_logo" src={FinalLogoWhiteBackground} onClick={handleClick} />
                 <CreateRecipeContainer/>
             </>
         )
@@ -81,7 +84,7 @@ const AppContainer = () => {
     return(
 
         <section className="main_page">
-            <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+            <img className = "app_logo" src={FinalLogoWhiteBackground} onClick={handleClick} />
             <div className ="homepage_button" onClick={handleAllRecipesClick}>View All Recipes</div>
             <div className ="homepage_button" onClick={handleShoppingListClick}>View Shopping List</div>
             <div className ="homepage_button" onClick={handleCreateRecipeClick}>Create a Recipe</div>

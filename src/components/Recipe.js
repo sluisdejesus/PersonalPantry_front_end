@@ -34,21 +34,21 @@ const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
 
             <h3 id = "individual_recipe_name">{chosenRecipe.name}</h3>
 
-            <div id = "individual_recipe_image">
-                <img className="recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
-            </div>
+            <img id="individual_recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
             
             <ul>
-                <h5>Ingredients</h5>
-                    {recipeIngredientsList}
-
+                <div id="recipe_ingredients">
+                    <h5>Ingredients</h5>
+                        {recipeIngredientsList}
+                </div>
+                    <li id="minutes">Ready in - {chosenRecipe.readyInMinutes} minutes</li>
                 <li>
                 <h5>Instructions</h5>
-                    <ul>
+                    <ul id="instruction_list">
                         {instructionsList}
                     </ul>
                 </li>
-                <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
+                
             </ul>
         </section>
     )

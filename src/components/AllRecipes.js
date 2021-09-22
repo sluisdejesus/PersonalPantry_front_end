@@ -16,7 +16,7 @@ const AllRecipes = ({allRecipes, onRecipeChosen}) => {
                 
                 <ul className="recipe_details_box">
                     <div className="recipe_details_image">
-                    <img className="recipe_image" src={recipe.imageUrl} alt={recipe.name}/>
+                    <img id="recipe_image" src={recipe.imageUrl} alt={recipe.name}/>
                     </div>
 
                     <div className="recipe_details">

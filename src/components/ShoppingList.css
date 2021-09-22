@@ -1,6 +1,9 @@
 @media(max-width:480px){
 
     .ingredient_list{
+        margin-top: 5%;
+        padding-top: 3%;
+        padding-left: 3%;
         background-color: #EF8276;
         width: 80%;
         border-radius: 5%;

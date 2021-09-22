@@ -3,8 +3,7 @@
     border-radius: 5%;
     background-color: #EF8276;
     width: 80%;
-    height: 20vh;    
-    color: white;
+    height: 20%;
     margin: 4%;
     /* padding-top: 1vh; */
 }
@@ -12,16 +11,19 @@
     list-style: none;
 }
 
-.recipe_image{
-    width: 120px;
-    height: 120px;
-    /* padding-right: 10%;
-    padding-top: 3vh;
-    padding-bottom: 3vh; */
+#recipe_image{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+
 }
 
 .recipe_details{
-    padding-left: 10%;
+ margin-top: 8%;
+ margin-right: 5%;
+ margin-left: 5%;
+ color: white;
+
 }
 
 .recipe_details_box{
@@ -29,10 +31,17 @@
     flex-direction: row;
     margin-top: auto;
     margin-bottom: auto;
+    justify-content: center;
 }
 
 #list {
     list-style: none;
+
+}
+.recipe_details_image{
+    width: 60%;
+    margin-top: 8%;
+    margin-bottom: 8%;
 }
 
 
