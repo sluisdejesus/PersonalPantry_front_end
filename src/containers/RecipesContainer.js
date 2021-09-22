@@ -31,6 +31,7 @@ const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList
         PersonalPantryServices.getShoppingLists()
             .then(shoppingList => setShoppingList(shoppingList));
         })
+        .then(setChosenRecipe(null))
     };
 
     // useEffect (() => {
