@@ -3,10 +3,10 @@ import AllRecipes from  "../components/AllRecipes"
 import Recipe from  "../components/Recipe"
 import PersonalPantryServices from "../services/PersonalPantryServices";
 
-const RecipesContainer = ({allRecipes, returnHome, shoppingList}) => {
+const RecipesContainer = ({allRecipes, returnHome, shoppingList, setShoppingList}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
-    const [selectedRecipe, setSelectedRecipe] = useState({})
+    // const [selectedRecipe, setSelectedRecipe] = useState({})
     const [desiredServings, setDesiredServings] = useState(0)
     
     const onRecipeChosen = (recipe) => {
@@ -21,17 +21,21 @@ const RecipesContainer = ({allRecipes, returnHome, shoppingList}) => {
         setChosenRecipe(null)
     }
      
-    const recipeSelected = event => {
-        setSelectedRecipe({
+    const recipeSelected = () => {
+        PersonalPantryServices.addSelectedRecipe({
             recipe: chosenRecipe,
             desiredServings: desiredServings,
             shoppingList: shoppingList
         })
-    }
+        .then((recipe) => {
+        PersonalPantryServices.getShoppingLists()
+            .then(shoppingList => setShoppingList(shoppingList));
+        })
+    };
 
-    useEffect (() => {
-        PersonalPantryServices.addSelectedRecipe(selectedRecipe)
-    }, [selectedRecipe])
+    // useEffect (() => {
+    //     PersonalPantryServices.addSelectedRecipe(selectedRecipe)
+    // }, [selectedRecipe]) 
 
     if(chosenRecipe) {
         return (
