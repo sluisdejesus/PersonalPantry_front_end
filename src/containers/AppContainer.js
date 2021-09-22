@@ -46,10 +46,9 @@ const AppContainer = () => {
         setCreateRecipeClick(true)
     }
 
-
     if(recipesListClick) {
         return(
-            <RecipeContainer allRecipes={allRecipes} returnHome={returnHome}/>
+            <RecipeContainer allRecipes={allRecipes} returnHome={returnHome} shoppingList={shoppingList}/>
         )
     }
 
