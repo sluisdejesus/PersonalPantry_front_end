@@ -1,6 +1,8 @@
-.main_page{
-    display: flex;
-    justify-content: space-between;
+@media(max-width:480px){
+    .main_page{
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;   
 }
 
 
@@ -8,6 +10,9 @@
 .homepage_button{
     background-color: #EF8276;
     height: 20vh;
-    width: 20vh;
+    width: 50vh;
     text-align: center;
+    margin: auto;
 }
+}
+

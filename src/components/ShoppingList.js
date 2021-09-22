@@ -5,7 +5,7 @@ const ShoppingList = ({shoppingList}) => {
 
     const shoppingListIngredientsList = Object.entries(shoppingList.ingredientList).map(([key, value]) => {
         return(
-        <li key={key}>{(value)} {key}</li>
+        <li key={key}>{(value)}{key}</li>
         )
       })
 

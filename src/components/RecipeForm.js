@@ -1,6 +1,10 @@
 import React, { useState } from "react"; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./RecipeForm.css";
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+
+
 
 const RecipeForm = () => {   
     const [name, setName] = useState(0);
@@ -15,12 +19,12 @@ const RecipeForm = () => {
     const handleDescription = (event) => setDescription(event.target.value);
 
     
-    const handleSubmit = event => {
-        event.preventDefault();
-        const values = {
-            name:(name)
-        }
-    }
+    // const handleSubmit = event => {
+    //     event.preventDefault();
+    //     const values = {
+    //         name:(name)
+    //     }
+    // }
 
     const handleClick = (event) => {
         event.preventDefault();  
@@ -54,20 +58,27 @@ return (
             <label htmlFor="description">Description:  </label>
             <input type="text" id="description" onChange = {handleDescription}></input>
             </div>
-        <p></p>
-        <p></p>
+<br></br>
+        <div>
+            <h4>Ingredients</h4>
+            <ul id="ingredient_list">
+            {instructionSteps}
+            </ul>
+            <FontAwesomeIcon icon={faPlus} onClick={handleClick} color="#ef8276"/>
+        </div>
+        <br></br>
         <div>
             <h4>Instructions</h4>
             <ul id="instruction_list">
             {instructionSteps}
             </ul>
-            <button onClick={handleClick}>Add more steps</button>
-            <i class="fas fa-plus">Add More Steps</i>
-            <FontAwesomeIcon icon="coffee" />
+            <FontAwesomeIcon icon={faPlus} onClick={handleClick} color="#ef8276"/>
+
+
        </div>
     <br></br>
 
-    <button> Recipe</button>
+    <button>Save Recipe</button>
 
 
     </form>

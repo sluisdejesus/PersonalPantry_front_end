@@ -1,4 +1,6 @@
+@media(max-width:480px){
+
 .recipe_form{
-    background-color: #EF8276;
     width: 80%;
+}
 }
