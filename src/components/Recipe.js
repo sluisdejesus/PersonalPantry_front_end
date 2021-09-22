@@ -42,7 +42,7 @@ const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
                         {recipeIngredientsList}
                 </div>
                     <li id="minutes">Ready in - {chosenRecipe.readyInMinutes} minutes</li>
-                <li>
+                <li> 
                 <h5>Instructions</h5>
                     <ul id="instruction_list">
                         {instructionsList}
