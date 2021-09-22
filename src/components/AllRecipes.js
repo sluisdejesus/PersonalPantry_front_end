@@ -3,15 +3,14 @@ import Recipe from "./Recipe";
 
 const AllRecipes = ({allRecipes, onRecipeChosen}) => {
 
-    const handleClick = (event) => {
-        
-       const chosenRecipe = allRecipes[event.target.value]
+    const handleClick = (recipeIndex) => {
+       const chosenRecipe = allRecipes[recipeIndex]
        onRecipeChosen(chosenRecipe)
     }
 
     const recipeNodes = allRecipes.map((recipe, index) => {
         return(
-            <section key={recipe.id} value={index} onClick={handleClick}>
+            <section key={recipe.id} value={index} onClick={() => handleClick(index)}>
                 <ul>
                     <img src={recipe.imageUrl} alt={recipe.name}/>
                     <li>{recipe.name}</li>
