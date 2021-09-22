@@ -15,19 +15,19 @@ const PersonalPantryServices = {
     getShoppingLists() {
         return fetch(baseURL + 'shoppingLists/1')
         .then(res => res.json());
+    },
+
+    addSelectedRecipe(selectedRecipe) {
+        // console.log(selectedRecipe)
+        return fetch(baseURL + 'selectedRecipes', {
+            method:'POST',
+            body: JSON.stringify(selectedRecipe),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => res.json());
     }
-
-    // addCarbonData(data) {
-    //     return fetch(baseURL, {
-    //         method:'POST',
-    //         body: JSON.stringify(data),
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-    //     .then(res => res.json());
-
-    // },
 
     // updateCarbonData(data){
     //     return fetch(baseURL + data._id, {
