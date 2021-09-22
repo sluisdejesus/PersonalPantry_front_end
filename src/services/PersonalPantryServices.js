@@ -18,7 +18,6 @@ const PersonalPantryServices = {
     },
 
     addSelectedRecipe(selectedRecipe) {
-        // console.log(selectedRecipe)
         return fetch(baseURL + 'selectedRecipes', {
             method:'POST',
             body: JSON.stringify(selectedRecipe),

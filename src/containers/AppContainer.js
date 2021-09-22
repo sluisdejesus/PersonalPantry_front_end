@@ -3,6 +3,8 @@ import PersonalPantryServices from "../services/PersonalPantryServices";
 import RecipeContainer from "./RecipesContainer"
 import ShoppingListContainer from "./ShoppingListContainer"
 import CreateRecipeContainer from "./CreateRecipeContainer"
+import FinalLogoWhiteBackground from "../FinalLogoWhiteBackground.jpg";
+
 import "./AppContainer.css";
 
 const AppContainer = () => {
@@ -14,6 +16,7 @@ const AppContainer = () => {
     const [shoppingListClick, setShoppingListClick] = useState(false)
     const [createRecipeClick, setCreateRecipeClick] = useState(false)
     
+
     useEffect(() => {
         PersonalPantryServices.getRecipes()
             .then(allRecipes => setAllRecipes(allRecipes));
@@ -27,17 +30,16 @@ const AppContainer = () => {
             .then(shoppingList => setShoppingList(shoppingList));
     }, [])
 
-    const returnHome = () => {
+
+    const handleClick = () => {
         setShoppingListClick(false);
         setRecipesListClick(false);
         setCreateRecipeClick(false);
     }
 
-
     const handleAllRecipesClick = event => {
         setRecipesListClick(true)
     }
-
 
     const handleShoppingListClick = event => {
         setShoppingListClick(true)
@@ -47,31 +49,42 @@ const AppContainer = () => {
         setCreateRecipeClick(true)
     }
 
+
     if(recipesListClick) {
         return(
-            <RecipeContainer allRecipes={allRecipes} returnHome={returnHome} shoppingList={shoppingList} setShoppingList={setShoppingList}/>
+            <>
+                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+                <RecipeContainer allRecipes={allRecipes} shoppingList={shoppingList} setShoppingList={setShoppingList}/>
+            </>
         )
     }
 
-
     if(shoppingListClick) {
         return(
-            <ShoppingListContainer shoppingList={shoppingList} returnHome={returnHome} shoppingListClick={shoppingListClick}/>
+            <>
+                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+                <ShoppingListContainer shoppingList={shoppingList} shoppingListClick={shoppingListClick}/>
+            </>
         )
     }
 
     if(createRecipeClick) {
         return(
-            <CreateRecipeContainer returnHome={returnHome}/>
+            <>
+                <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+                <CreateRecipeContainer/>
+            </>
         )
     }
 
 
     return(
+
         <section className="main_page">
-        <div className ="homepage_button" onClick={handleAllRecipesClick}>View All Recipes</div>
-        <div className ="homepage_button" onClick={handleShoppingListClick}>View Shopping List</div>
-        <div className ="homepage_button" onClick={handleCreateRecipeClick}>Create a Recipe</div>
+            <img src={FinalLogoWhiteBackground} onClick={handleClick} />
+            <div className ="homepage_button" onClick={handleAllRecipesClick}>View All Recipes</div>
+            <div className ="homepage_button" onClick={handleShoppingListClick}>View Shopping List</div>
+            <div className ="homepage_button" onClick={handleCreateRecipeClick}>Create a Recipe</div>
         </section>
     );
 }
