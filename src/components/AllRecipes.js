@@ -1,5 +1,6 @@
 import React from "react";
 import Recipe from "./Recipe";
+// import AllRecipes.css from "./All" 
 
 const AllRecipes = ({allRecipes, onRecipeChosen}) => {
 
@@ -10,7 +11,7 @@ const AllRecipes = ({allRecipes, onRecipeChosen}) => {
 
     const recipeNodes = allRecipes.map((recipe, index) => {
         return(
-            <section key={recipe.id} value={index} onClick={() => handleClick(index)}>
+            <section className="recipe_section" key={recipe.id} value={index} onClick={() => handleClick(index)}>
                 <ul>
                     <img src={recipe.imageUrl} alt={recipe.name}/>
                     <li>{recipe.name}</li>
