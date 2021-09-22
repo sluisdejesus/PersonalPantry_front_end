@@ -61,7 +61,7 @@ return (
             {instructionSteps}
             </ul>
             <button onClick={handleClick}>Add more steps</button>
-
+            <i class="fas fa-plus"></i>
        </div>
     <br></br>
 
