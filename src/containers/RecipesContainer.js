@@ -27,6 +27,7 @@ const RecipesContainer = ({allRecipes, shoppingList, setShoppingList}) => {
         PersonalPantryServices.getShoppingLists()
             .then(shoppingList => setShoppingList(shoppingList));
         })
+        .then(setChosenRecipe(null))
     };
 
     if(chosenRecipe) {
