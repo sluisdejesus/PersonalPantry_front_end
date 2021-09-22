@@ -1,0 +1,13 @@
+@media(max-width:480px){
+
+.header{
+    
+
+}
+.header_text{
+    text-align: center;
+    color: #ef8276;
+    background-image: url("./FinalLogoWhiteBackground.jpg");
+}
+
+}

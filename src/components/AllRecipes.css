@@ -2,7 +2,11 @@
 .recipe_section{
     background-color: #EF8276;
     width: 80%;
+    border-radius: 5%;
 
+}
+.recipe_section > ul > li {
+    list-style: none;
 }
 
 .recipe_image{

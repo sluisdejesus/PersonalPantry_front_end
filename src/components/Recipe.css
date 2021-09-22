@@ -3,5 +3,10 @@
 .individual_recipe{
     background-color: #EF8276;
     width: 80%;
+    border-radius: 5%;
+}
+
+.individual_recipe > ul > li {
+    list-style: none;
 }
 }

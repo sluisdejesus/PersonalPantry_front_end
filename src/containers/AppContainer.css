@@ -1,18 +1,27 @@
 @media(max-width:480px){
     .main_page{
-    display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;   
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
 }
 
 
 
 .homepage_button{
     background-color: #EF8276;
+    font-size: 3vh;
     height: 20vh;
-    width: 50vh;
+    width: 40vh;
+    margin: 7%;
+    justify-content: space-evenly;
+    padding: 5;
+    border-radius: 5%;
     text-align: center;
-    margin: auto;
+    padding-top: 10%;
+    color: white;
+    font-weight: bold;
+
+    
 }
 }
 

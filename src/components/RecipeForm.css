@@ -1,9 +1,19 @@
 @media(max-width:480px){
 
 .recipe_form{
+    display: inline-block;
+    align-items: center;
     width: 80%;
 }
 .input_box{
-    border: ;
+    border: 2px #EF8276 solid;
+    border-radius: 5%;
+}
+.input_label {
+    color: #ef8276;
+    border-radius: 5%;
+}
+.plusButton {
+   align-items: center;
 }
 }

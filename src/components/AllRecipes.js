@@ -2,6 +2,7 @@ import React from "react";
 import Recipe from "./Recipe";
 import "./AllRecipes.css"; 
 
+
 const AllRecipes = ({allRecipes, onRecipeChosen}) => {
 
     const handleClick = (recipeIndex) => {

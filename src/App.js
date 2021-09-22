@@ -1,11 +1,15 @@
 import './App.css';
 import AppContainer from "./containers/AppContainer"
+// import FinalLogoWhiteBackground from "./FinalLogoWhiteBackground.jpg";
 
 function App() {
 
   return (
       <>
-      <h1>Personal Pantry</h1>
+      <header className="header">
+      {/* <img src={'./FinalLogoWhiteBackground.jpg'} /> */}
+      <h1 className="header_text">Personal Pantry</h1>
+      </header>      
       <AppContainer/>
       </>
   );
