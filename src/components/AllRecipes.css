@@ -6,10 +6,7 @@
     height: 20vh;    
     color: white;
     margin: 4%;
-    padding-top: 10vh;
-
-    
-
+    /* padding-top: 1vh; */
 }
 .recipe_section > ul > li {
     list-style: none;
@@ -30,5 +27,13 @@
 .recipe_details_box{
     display: flex;
     flex-direction: row;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
+#list {
+    list-style: none;
+}
+
+
 }

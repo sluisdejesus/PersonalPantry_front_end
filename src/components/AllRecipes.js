@@ -22,9 +22,10 @@ const AllRecipes = ({allRecipes, onRecipeChosen}) => {
                     <div className="recipe_details">
 
                     <h3>{recipe.name}</h3>
-                    <li className ="recipe_list">Ready in {recipe.readyInMinutes} minutes</li>
-                    <li className ="recipe_list">Calories {recipe.caloriesPerServing} kcal</li>
-
+                    <div id="list">
+                    <li>Ready in {recipe.readyInMinutes} minutes</li>
+                    <li>Calories {recipe.caloriesPerServing} kcal</li>
+                    </div>
                     </div>
                 </ul>        
             </section>

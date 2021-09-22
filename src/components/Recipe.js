@@ -4,7 +4,7 @@ import "./Recipe.css";
 const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
 
    const instructionsList = chosenRecipe.instructions.map((instruction) => {
-        return <li key={chosenRecipe.id}>{instruction}</li>   
+        return <li className="instruction_points"key={chosenRecipe.id}>{instruction}</li>   
     })
 
     const recipeIngredientsList = chosenRecipe.recipeIngredients.map((recipeIngredient) => {
@@ -25,24 +25,31 @@ const Recipe = ({chosenRecipe, recipeSelected, setDesiredServings}) => {
     
     return (
         <section className="individual_recipe">
-        <label htmlFor="name">Serving size:</label>
-        <input onChange={onChange} type="number" id="serving_size" min="1" placeholder="1"></input>
-        <button onClick={handleClick}>Add to Shopping list</button>
-        <img className="recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
-        <ul>
-            <li>{chosenRecipe.name}</li>
-            
-            Ingredients
-                {recipeIngredientsList}
 
-            <li>
-            Instructions
-                <ul>
-                    {instructionsList}
-                </ul>
-            </li>
-            <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
-        </ul>
+            <div id = "individual_recipe_header">
+                <label htmlFor="name">Serving size:</label>
+                <input onChange={onChange} type="number" id="serving_size" min="1" placeholder="1"></input>
+                <button id="add_recipe_button" onClick={handleClick}>Add to Shopping list</button>
+            </div>
+
+            <h3>{chosenRecipe.name}</h3>
+
+            <div id = "individual_recipe_image">
+                <img className="recipe_image" src={chosenRecipe.imageUrl} alt={chosenRecipe.name}/>
+            </div>
+            
+            <ul>
+                <h5>Ingredients</h5>
+                    {recipeIngredientsList}
+
+                <li>
+                <h5>Instructions</h5>
+                    <ul>
+                        {instructionsList}
+                    </ul>
+                </li>
+                <li>Ready in - {chosenRecipe.readyInMinutes} minutes</li>
+            </ul>
         </section>
     )
 
