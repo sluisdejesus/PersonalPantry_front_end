@@ -13,12 +13,12 @@ const RecipeForm = () => {
     const handleDescription = (event) => setDescription(event.target.value);
 
     
-    const handleSubmit = event => {
-        event.preventDefault();
-        const values = {
-            name:(name)
-        }
-    }
+    // const handleSubmit = event => {
+    //     event.preventDefault();
+    //     const values = {
+    //         name:(name)
+    //     }
+    // }
 
     const handleClick = (event) => {
         event.preventDefault();  
@@ -64,7 +64,7 @@ return (
        </div>
     <br></br>
 
-    <button> Recipe</button>
+    <button>Save Recipe</button>
 
 
     </form>
