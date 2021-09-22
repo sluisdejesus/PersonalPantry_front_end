@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import ShoppingList from "../components/ShoppingList"
 import "./ShoppingListContainer.css";
 
-const ShoppingListContainer = ({shoppingList, returnHome, shoppingListClick}) => {
+const ShoppingListContainer = ({shoppingList}) => {
 
     // const [shoppingListMap, setShoppingListMap] = useState([])
 
@@ -14,13 +14,8 @@ const ShoppingListContainer = ({shoppingList, returnHome, shoppingListClick}) =>
     //    setShoppingListMap(Object.entries(shoppingList.ingredientList))
     // }
 
-    const handleClick = (event) => {
-        returnHome();
-    }
-
     return(
         <>
-        <button onClick={handleClick}>Home</button>
         <ShoppingList shoppingList={shoppingList}/>
         </>
     )
