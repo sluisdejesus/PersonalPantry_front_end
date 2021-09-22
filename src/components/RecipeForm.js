@@ -39,7 +39,7 @@ const instructionSteps = instructions.map((instruction, index) => {
 return (
     <form className="recipe_form">
         <h2>New Recipe</h2>
-        <div>
+        <div className="input_box">
             <label htmlFor= "name">Recipe Name:  </label>
             <input type="text" id="name" onChange={handleName}></input>
             
