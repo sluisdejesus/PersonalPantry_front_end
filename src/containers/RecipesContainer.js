@@ -7,7 +7,7 @@ import PersonalPantryServices from "../services/PersonalPantryServices";
 const RecipesContainer = ({allRecipes, shoppingList, setShoppingList}) => {
 
     const [chosenRecipe, setChosenRecipe] = useState(null)
-    const [desiredServings, setDesiredServings] = useState(0)
+    const [desiredServings, setDesiredServings] = useState(1)
     
     const onRecipeChosen = (recipe) => {
         setChosenRecipe(recipe);
