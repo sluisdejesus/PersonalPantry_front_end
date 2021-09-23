@@ -8,5 +8,6 @@
         width: 80%;
         border-radius: 5%;
         color: white;
+        box-shadow: 1px 1px 2px black;
     }
     }
